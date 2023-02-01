@@ -21,6 +21,12 @@ class Board
             raise "you can't move there"
         end
     end
+
+    def self.print_rows(rows)
+        rows.each do |row|
+            puts row.join(" ")
+        end
+    end
 end
 
  class Piece
@@ -30,3 +36,4 @@ end
         @pos = pos
     end
  end
+
