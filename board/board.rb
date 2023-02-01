@@ -19,7 +19,7 @@ class Board
     end
 
     def move_piece(start_pos, end_pos)
-        if @rows[start_pos] == nil
+        if @rows[[start_pos]] == nil
             raise "there are no pieces at that position"
         elsif (end_pos[0] < 0 || end_pos[0] > 7) || (end_pos[1] < 0 || end_pos[1] > 7)
             raise "you can't move there"
@@ -30,6 +30,7 @@ class Board
         rows.each do |row|
             puts row.join(" ")
         end
+        return 
     end
 
     def place_piece
@@ -50,6 +51,22 @@ class Board
         self[[1, 5]]= '♙' 
         self[[1, 6]]= '♙' 
         self[[1, 7]]= '♙' 
+        self[[7, 0]]= '♜' 
+        self[[7, 1]]= '♞' 
+        self[[7, 2]]= '♝' 
+        self[[7, 3]]= '♛' 
+        self[[7, 4]]= '♚' 
+        self[[7, 5]]= '♝' 
+        self[[7, 6]]= '♞' 
+        self[[7, 7]]= '♜' 
+        self[[6, 0]]= '♙' 
+        self[[6, 1]]= '♙' 
+        self[[6, 2]]= '♙' 
+        self[[6, 3]]= '♙' 
+        self[[6, 4]]= '♙' 
+        self[[6, 5]]= '♙' 
+        self[[6, 6]]= '♙' 
+        self[[6, 7]]= '♙' 
 
     end
 
