@@ -17,6 +17,8 @@ class Board
     def move_piece(start_pos, end_pos)
         if @rows[start_pos] == nil
             raise "there are no pieces at that position"
+        elsif (end_pos[0] < 0 || end_pos[0] > 7) || (end_pos[1] < 0 || end_pos[1] > 7)
+            raise "you can't move there"
         end
     end
 end
